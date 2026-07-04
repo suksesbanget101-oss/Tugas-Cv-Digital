@@ -1,76 +1,296 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Simpel - Arya Bagus</title>
+    <title>Curriculum Vitae - Arya Bagus Putranto</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; scroll-behavior: smooth; }
-        
-        /* Menu Navigasi */
-        nav { background: #111; padding: 15px; position: sticky; top: 0; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
-        nav a:hover { color: #4CAF50; }
-
-        /* Konten */
-        .container { max-width: 600px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1, h2 { color: #111; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; }
-        .section { margin-bottom: 30px; padding-top: 20px; }
-        ul { padding-left: 20px; }
-        
-        /* Footer */
-        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #666; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        header h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .contact-info span {
+            margin-right: 15px;
+            display: inline-block;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .about-text {
+            text-align: justify;
+            font-size: 15px;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: bold;
+            color: #34495e;
+            font-size: 15px;
+        }
+        .timeline-company {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .timeline-body ul {
+            list-style-type: square;
+            margin-left: 20px;
+            font-size: 14.5px;
+        }
+        .timeline-body ul li {
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .skills-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        .skills-category h3 {
+            font-size: 15px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 5px;
+        }
+        .skills-category ul {
+            list-style: none;
+            font-size: 14px;
+        }
+        .skills-category ul li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .skills-category ul li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .personal-info-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 10px 0;
+            font-size: 14.5px;
+        }
+        .personal-info-label {
+            font-weight: bold;
+            color: #7f8c8d;
+        }
+        @media (max-width: 600px) {
+            .timeline-header {
+                flex-direction: column;
+            }
+            body {
+                padding: 10px;
+            }
+            .cv-container {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Menu Navigasi -->
-    <nav>
-        <a href="#profil">Profil</a>
-        <a href="#pendidikan">Pendidikan</a>
-        <a href="#pengalaman">Pengalaman</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
+<div class="cv-container">
+    <header>
+        <h1>Arya Bagus Putranto</h1>
+        <p>Mahasiswa Bisnis Digital & Profesional Bidang Farmasi</p>
+        <div class="contact-info">
+            <span>📍 Malang, Jawa Timur</span>
+            <span>✉️ aryabagusputranto19@gmail.com</span>
+            <span></span>
+        </div>
+    </header>
 
-    <div class="container">
+    <section>
+        <h2>Tentang Saya</h2>
+        <p class="about-text">
+            Mahasiswa Bisnis Digital Universitas Kepanjen dengan latar belakang pendidikan farmasi serta pengalaman profesional yang solid di bidang pelayanan kefarmasian, manajemen retail, dan digital marketing e-commerce. Memiliki kombinasi keahlian analitis untuk mengembangkan bisnis digital serta pemahaman operasional klinis dan komunitas yang mendalam.
+        </p>
+    </section>
+
+    <section>
+        <h2>Pengalaman Kerja</h2>
         
-        <!-- Section Profil -->
-        <div id="profil" class="section">
-            <h1>Arya Bagus Putranto</h1>
-            <p>Mahasiswa Bisnis Digital yang tertarik dengan dunia e-commerce, manajemen aset, dan analisis bisnis.</p>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>Tenaga Teknis Kefarmasian / Staf Apotek</span>
+                <span>2025 – 2026</span>
+            </div>
+            <div class="timeline-company">Apotek Manggala Farma</div>
+            <div class="timeline-body">
+                <ul>
+                    <li>Mengelola pelayanan kefarmasian, peracikan obat, dan pemberian informasi obat (KIE) bagi pasien.</li>
+                    <li>Melakukan pengelolaan stok, monitoring kedaluwarsa (ED), dan optimasi inventaris sediaan farmasi.</li>
+                    <li>Membantu proses digitalisasi pencatatan data transaksi dan inventaris harian.</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Section Pendidikan -->
-        <div id="pendidikan" class="section">
-            <h2>Pendidikan</h2>
-            <ul>
-                <li><strong>Bisnis Digital</strong> - Mahasiswa Aktif</li>
-                <li><strong>SMK Farmasi</strong> - Lulus</li>
-            </ul>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>Tenaga Teknis Kefarmasian / Staf Apotek</span>
+                <span>2024 – 2025</span>
+            </div>
+            <div class="timeline-company">Apotek Andhika, Kota Malang</div>
+            <div class="timeline-body">
+                <ul>
+                    <li>Melayani verifikasi resep, peracikan obat, dan menjaga akurasi distribusi obat keras maupun reguler.</li>
+                    <li>Mengatur administrasi pelaporan narkotika dan psikotropika sesuai standar regulasi.</li>
+                    <li>Membangun loyalitas pelanggan melalui komunikasi aktif dan pelayanan yang ramah.</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Section Pengalaman -->
-        <div id="pengalaman" class="section">
-            <h2>Pengalaman & Minat</h2>
-            <ul>
-                <li><strong>E-Commerce:</strong> Aktif mengelola toko dan ikut campaign kreator di Tokopedia & TikTok Shop.</li>
-                <li><strong>Analisis Bisnis:</strong> Berpengalaman mengerjakan proyek analisis kasus bisnis digital (Studi Kasus: PT Nusantara Food).</li>
-                <li><strong>Manajemen Aset:</strong> Mengelola aset digital secara mandiri.</li>
-            </ul>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>Praktek Kerja Lapangan (PKL)</span>
+                <span>2022</span>
+            </div>
+            <div class="timeline-company">Apotek Petra, Kepanjen</div>
+            <div class="timeline-body">
+                <ul>
+                    <li>Mempelajari dasar manajemen tata kelola apotek retail langsung di bawah supervisi Apoteker.</li>
+                    <li>Menyusun penataan obat menggunakan metode FIFO/FEFO secara alfabetis.</li>
+                    <li>Mendukung operasional harian dan administrasi pelayanan kasir.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Riwayat Pendidikan</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>S1 - Bisnis Digital</span>
+                <span>2025 – Sekarang</span>
+            </div>
+            <div class="timeline-company">Universitas Kepanjen</div>
         </div>
 
-        <!-- Section Kontak -->
-        <div id="kontak" class="section">
-            <h2>Kontak</h2>
-            <p>📧 Email: aryabagus@email.com <i></i></p>
-            <p>📍 Lokasi: Indonesia</p>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>SMK Farmasi (Farmasi Klinis & Komunitas)</span>
+                <span>2020 – 2023</span>
+            </div>
+            <div class="timeline-company">SMK Farmasi Maharani Malang</div>
         </div>
 
-    </div>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>SMP Negeri 01 Wonosari</span>
+                <span>2017 – 2020</span>
+            </div>
+        </div>
 
-    <footer>
-        &copy; 2026 Arya Bagus Putranto - Tugas Kewirausahaan Digital
-    </footer>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>SD Negeri 01 Sumberdem</span>
+                <span>2011 – 2017</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Keahlian & Kompetensi</h2>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3>Farmasi & Layanan</h3>
+                <ul>
+                    <li>Pelayanan Kefarmasian (KIE)</li>
+                    <li>Peracikan Sediaan Obat</li>
+                    <li>Manajemen FIFO / FEFO</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Digital & E-Commerce</h3>
+                <ul>
+                    <li>Manajemen Tokopedia & TikTok Shop</li>
+                    <li>Strategi Content & Kampanye Kreator</li>
+                    <li>Manajemen Aset & Keuangan Digital</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Komunikasi & Negosiasi</li>
+                    <li>Analisis Masalah & Solutif</li>
+                    <li>Kerjasama Tim & Adaptabilitas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Informasi Pribadi</h2>
+        <div class="personal-info-grid">
+            <div class="personal-info-label">TTL</div>
+            <div>Malang, 19 Maret 2005</div>
+            
+            <div class="personal-info-label">Alamat</div>
+            <div>RT 01 RW 07, Desa Sumberdem, Kec. Wonosari, Kab. Malang, Jawa Timur</div>
+        </div>
+    </section>
+</div>
 
 </body>
 </html>
